@@ -14,7 +14,7 @@ class Index extends Common
     public function index()
     {
         $request = Request::instance();
-        echo '<br/>';
+        /*echo '<br/>';
         echo $request->domain().'<br/>';
         echo $request->baseFile().'<br/>';
         echo $request->url().'<br/>';
@@ -30,8 +30,8 @@ class Index extends Common
         var_dump($head_info);
         //$request->param();
         $post = $request->except(['user_name']);
-        var_dump($post);
+        var_dump($post);*/
         $view = new view();
-        return $view->fetch('News/new');
+        return $view->fetch('index');
     }
 }
