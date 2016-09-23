@@ -16,7 +16,7 @@ class Common extends Controller{
         Session::set('user_info',['user_id'=>1,'user_name'=>'1111']);
         //清空session
         Session::clear();
-        //var_dump(session('user_info'));
+        //var_dump(session('is_login'));
         $this->is_login();
     }
 
