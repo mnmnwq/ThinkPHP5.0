@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:91:"/Applications/MAMP/htdocs/ThinkPHP5.0/tp5/public/../application/index/view/index/index.html";i:1474614892;s:93:"/Applications/MAMP/htdocs/ThinkPHP5.0/tp5/public/../application/index/view/layouts/index.html";i:1474613426;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:91:"/Applications/MAMP/htdocs/ThinkPHP5.0/tp5/public/../application/index/view/index/index.html";i:1474614892;s:93:"/Applications/MAMP/htdocs/ThinkPHP5.0/tp5/public/../application/index/view/layouts/index.html";i:1474616238;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,11 +93,7 @@
                         <div class="collapse navbar-collapse" id="header-bottom">
                             <ul class="nav navbar-nav">
                                 <li class="active">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="<?php echo url('/'); ?>">Home Page</a></li>
-                                        <li><a href="<?php echo url('index/index/index2'); ?>">Home Page 2</a></li>
-                                    </ul>
+                                    <a href="<?php echo url('/'); ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">主页</a>
                                 </li>
                                 <li>
                                     <a href="../spdn_13_Emarket/product-detail.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
