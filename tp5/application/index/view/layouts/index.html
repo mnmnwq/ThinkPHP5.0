@@ -100,30 +100,30 @@
                                 <span class="icon-bar"></span>
                             </button>
                         </div>
-
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="header-bottom">
                             <ul class="nav navbar-nav">
-                                <li class="active">
-                                    <a href="{:url('/')}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">主页</a>
+                                <li {eq name="Request.action" value="index"}class="active"{/eq}>
+                                    <a href="{:url('/')}" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">主页</a>
                                 </li>
-                                <li>
-                                    <a href="{:url('index/productlist/product_list')}../spdn_13_Emarket/product-detail.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">商品列表</a>
-                                    <!--<span class="label label-danger text-center hidden-xs">New <i class="fa fa-caret-right"></i></span>-->
-                                    <ul class="dropdown-menu">
-                                        <li><a href="../spdn_13_Emarket/product.html">Products</a></li>
-                                        <li><a href="../spdn_13_Emarket/product-detail.html">Product Details</a></li>
-                                        <li><a href="../spdn_13_Emarket/new-product.html">New Products</a></li>
-                                    </ul>
+                                <li {eq name="Request.action" value="product_list"}class="active"{/eq}>
+                                    <a href="{:url('index/productlist/product_list')}" class="dropdown-toggle"  role="button" aria-haspopup="true" aria-expanded="false">商品列表</a>
                                 </li>
-                                <li><a href="../spdn_13_Emarket/faq.html">FAQ</a></li>
-                                <li><a href="../spdn_13_Emarket/blog.html">论坛</a></li>
-                                <li><a href="../spdn_13_Emarket/blog-details.html">Blog Detail</a></li>
-                                <li>
+                                <li {eq name="Request.action" value="question_info"}class="active"{/eq}>
+                                    <a href="{:url('index/question/question_info')}">问题汇总</a>
+                                </li>
+                                <li {eq name="Request.action" value="blog"}class="active"{/eq}>
+                                    <a href="{:url('index/blog/blog')}">论坛</a>
+                                </li>
+                                <li {eq name="Request.action" value="blog_detail"}class="active"{/eq}>
+                                    <a href="{:url('index/blog/blog_detail')}">论坛详情</a>
+                                </li>
+                                <li {eq name="Request.action" value="about_us"}class="active"{/eq}>
                                     <a href="{:url('index/index/about_us')}">关于我们</a>
-                                    <span class="label label-info text-center hidden-xs">New <i class="fa fa-caret-right"></i></span>
+                                </li >
+                                <li {eq name="Request.action" value="contac_us"}class="active"{/eq} >
+                                    <a href="{:url('index/contacus/contac_us')}">联系我们</a>
                                 </li>
-                                <li><a href="../spdn_13_Emarket/contact-us.html">联系我们</a></li>
                             </ul>
                             <form class="navbar-form navbar-right" action="" method="" role="search">
                                 <div class="form-group">

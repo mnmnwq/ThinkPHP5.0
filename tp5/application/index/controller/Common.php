@@ -7,10 +7,13 @@ namespace app\index\controller;
  * Time: 上午9:38
  */
 use think\Controller;
+use think\View;
 use think\Session;
 
 class Common extends Controller{
+    protected $view;
     public function _initialize(){
+        $this->view = new View();
         $this->is_login();
     }
 

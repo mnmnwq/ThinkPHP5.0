@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:91:"/Applications/MAMP/htdocs/ThinkPHP5.0/tp5/public/../application/index/view/index/index.html";i:1474614892;s:93:"/Applications/MAMP/htdocs/ThinkPHP5.0/tp5/public/../application/index/view/layouts/index.html";i:1474854459;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:91:"/Applications/MAMP/htdocs/ThinkPHP5.0/tp5/public/../application/index/view/index/index.html";i:1474614892;s:93:"/Applications/MAMP/htdocs/ThinkPHP5.0/tp5/public/../application/index/view/layouts/index.html";i:1474869868;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -101,28 +101,26 @@
                                 <span class="icon-bar"></span>
                             </button>
                         </div>
-
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="header-bottom">
                             <ul class="nav navbar-nav">
-                                <li class="active">
-                                    <a href="<?php echo url('/'); ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">主页</a>
+                                <li <?php if(\think\Request::instance()->action() == 'index'): ?>class="active"<?php endif; ?>>
+                                    <a href="<?php echo url('/'); ?>" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">主页</a>
+                                </li>
+                                <li <?php if(\think\Request::instance()->action() == 'product_list'): ?>class="active"<?php endif; ?>>
+                                    <a href="<?php echo url('index/productlist/product_list'); ?>" class="dropdown-toggle"  role="button" aria-haspopup="true" aria-expanded="false">商品列表</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo url('index/productlist/product_list'); ?>../spdn_13_Emarket/product-detail.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">商品列表</a>
-                                    <!--<span class="label label-danger text-center hidden-xs">New <i class="fa fa-caret-right"></i></span>-->
-                                    <ul class="dropdown-menu">
-                                        <li><a href="../spdn_13_Emarket/product.html">Products</a></li>
-                                        <li><a href="../spdn_13_Emarket/product-detail.html">Product Details</a></li>
-                                        <li><a href="../spdn_13_Emarket/new-product.html">New Products</a></li>
-                                    </ul>
+                                    <a href="../spdn_13_Emarket/faq.html">FAQ</a>
                                 </li>
-                                <li><a href="../spdn_13_Emarket/faq.html">FAQ</a></li>
-                                <li><a href="../spdn_13_Emarket/blog.html">论坛</a></li>
-                                <li><a href="../spdn_13_Emarket/blog-details.html">Blog Detail</a></li>
+                                <li>
+                                    <a href="../spdn_13_Emarket/blog.html">论坛</a>
+                                </li>
+                                <li>
+                                    <a href="../spdn_13_Emarket/blog-details.html">论坛详情</a>
+                                </li>
                                 <li>
                                     <a href="<?php echo url('index/index/about_us'); ?>">关于我们</a>
-                                    <span class="label label-info text-center hidden-xs">New <i class="fa fa-caret-right"></i></span>
                                 </li>
                                 <li><a href="../spdn_13_Emarket/contact-us.html">联系我们</a></li>
                             </ul>
