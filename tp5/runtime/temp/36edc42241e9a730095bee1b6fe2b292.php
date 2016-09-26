@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:91:"/Applications/MAMP/htdocs/ThinkPHP5.0/tp5/public/../application/index/view/index/index.html";i:1474614892;s:93:"/Applications/MAMP/htdocs/ThinkPHP5.0/tp5/public/../application/index/view/layouts/index.html";i:1474617913;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:91:"/Applications/MAMP/htdocs/ThinkPHP5.0/tp5/public/../application/index/view/index/index.html";i:1474614892;s:93:"/Applications/MAMP/htdocs/ThinkPHP5.0/tp5/public/../application/index/view/layouts/index.html";i:1474854459;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,9 +40,18 @@
                         </li>
                     </ul>
                 </div>
-                <?php echo \think\Session::get('is_login'); ?>
-                <eq name="$Think.session.is_login" value="">
-                    <else/>
+                <?php if(\think\Session::get('is_login') != true): ?>
+                    <div class="col-sm-4">
+                        <ul class="list-inline">
+                            <li><a href="#" ><i class="fa fa-mobile"></i> 请登录</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-5">
+                        <ul class="list-inline pull-right">
+                            <li><a class="register" href="#" >注册</a></li>
+                        </ul>
+                    </div>
+                    <?php else: ?>
                     <div class="col-sm-4">
                         <ul class="list-inline">
                             <li><a href="#" ><i class="fa fa-mobile"></i> +88018374345</a></li>
@@ -57,7 +66,7 @@
                             <li><a class="register" href="#" >注册</a></li>
                         </ul>
                     </div>
-                </eq>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -100,7 +109,7 @@
                                     <a href="<?php echo url('/'); ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">主页</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo url(''); ?>../spdn_13_Emarket/product-detail.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">商城</a>
+                                    <a href="<?php echo url('index/productlist/product_list'); ?>../spdn_13_Emarket/product-detail.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">商品列表</a>
                                     <!--<span class="label label-danger text-center hidden-xs">New <i class="fa fa-caret-right"></i></span>-->
                                     <ul class="dropdown-menu">
                                         <li><a href="../spdn_13_Emarket/product.html">Products</a></li>

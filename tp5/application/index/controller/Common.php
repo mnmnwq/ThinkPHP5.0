@@ -11,20 +11,17 @@ use think\Session;
 
 class Common extends Controller{
     public function _initialize(){
-        //设置session
-        Session::set('is_login',true);
-        Session::set('user_info',['user_id'=>1,'user_name'=>'1111']);
-        //清空session
-        Session::clear();
-        //var_dump(session('is_login'));
         $this->is_login();
     }
 
     public function is_login(){
+        //设置session
+        Session::set('is_login',true);
+        Session::set('user_info',['user_id'=>1,'user_name'=>'1111']);
+        Session::clear();
         if(Session::get('is_login')){
-            //echo "yes";
         }else{
-            //echo "no";
+            $this->login();
         }
     }
 
@@ -39,6 +36,7 @@ class Common extends Controller{
      * 登出
      */
     public function quit(){
-
+        //清空session
+        //Session::clear();
     }
 }
