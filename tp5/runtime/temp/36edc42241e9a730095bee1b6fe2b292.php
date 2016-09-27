@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:91:"/Applications/MAMP/htdocs/ThinkPHP5.0/tp5/public/../application/index/view/index/index.html";i:1474614892;s:93:"/Applications/MAMP/htdocs/ThinkPHP5.0/tp5/public/../application/index/view/layouts/index.html";i:1474869868;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:91:"/Applications/MAMP/htdocs/ThinkPHP5.0/tp5/public/../application/index/view/index/index.html";i:1474614892;s:93:"/Applications/MAMP/htdocs/ThinkPHP5.0/tp5/public/../application/index/view/layouts/index.html";i:1474873731;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -110,19 +110,21 @@
                                 <li <?php if(\think\Request::instance()->action() == 'product_list'): ?>class="active"<?php endif; ?>>
                                     <a href="<?php echo url('index/productlist/product_list'); ?>" class="dropdown-toggle"  role="button" aria-haspopup="true" aria-expanded="false">商品列表</a>
                                 </li>
-                                <li>
-                                    <a href="../spdn_13_Emarket/faq.html">FAQ</a>
+                                <li <?php if(\think\Request::instance()->action() == 'question_info'): ?>class="active"<?php endif; ?>>
+                                    <a href="<?php echo url('index/question/question_info'); ?>">问题汇总</a>
                                 </li>
-                                <li>
-                                    <a href="../spdn_13_Emarket/blog.html">论坛</a>
+                                <li <?php if(\think\Request::instance()->action() == 'blog'): ?>class="active"<?php endif; ?>>
+                                    <a href="<?php echo url('index/blog/blog'); ?>">论坛</a>
                                 </li>
-                                <li>
-                                    <a href="../spdn_13_Emarket/blog-details.html">论坛详情</a>
+                                <li <?php if(\think\Request::instance()->action() == 'blog_detail'): ?>class="active"<?php endif; ?>>
+                                    <a href="<?php echo url('index/blog/blog_detail'); ?>">论坛详情</a>
                                 </li>
-                                <li>
+                                <li <?php if(\think\Request::instance()->action() == 'about_us'): ?>class="active"<?php endif; ?>>
                                     <a href="<?php echo url('index/index/about_us'); ?>">关于我们</a>
+                                </li >
+                                <li <?php if(\think\Request::instance()->action() == 'contac_us'): ?>class="active"<?php endif; ?> >
+                                    <a href="<?php echo url('index/contacus/contac_us'); ?>">联系我们</a>
                                 </li>
-                                <li><a href="../spdn_13_Emarket/contact-us.html">联系我们</a></li>
                             </ul>
                             <form class="navbar-form navbar-right" action="" method="" role="search">
                                 <div class="form-group">
